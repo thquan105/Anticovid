@@ -18,10 +18,10 @@ div.container {
     min-height: 100vh;
     flex-direction: column;
 }
-div.wrap {background-image: linear-gradient(  #87CEFA, #0099FF);border-top: 5px groove;display: flex;}
+div.wrap {background: #949494;);border-top: 5px groove;display: flex;}
 header {
     height: 100%;
-    background-image: linear-gradient(  #1E90FF, #FFFFFF 65%, #1E90FF);
+    background-image: linear-gradient( #00f5ff, #220b7c 160%);;
 }
 #header, main, #footer {
     max-width: 1200px;
@@ -46,24 +46,24 @@ main {
 .search > div:after {
     content: "";
     background: white;
-    width: 5px;
-    height: 15px;
+    width: 6px;
+    height: 20px;
     position: absolute;
-    top: 25px;
-    right: -1px;
-    transform: rotate(145deg);
+    top: 45px;
+    right: 3px;
+    transform: rotate(148deg);
     }
     
 .search > div > input {
     color: #FFF;
-    font-size: 10px;
+    font-size: 20px;
     background: transparent;
-    width: 5px;
-    height: 5px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     border: solid 5px white;
     outline: none;
-    border-radius: 20px;
+    border-radius: 999px;
     transition: width 0.5s;
     }
     
@@ -78,7 +78,7 @@ main {
     }
     
 .search > div > input:focus,.search > div > input:not(:placeholder-shown) {
-      width: 15em;
+      width: 16em;
 }
 /*Nav*/
 nav {
@@ -96,7 +96,7 @@ nav li>a ,.dropbtn{
     text-decoration: none;
     color: #fff;
     font-weight: 550;
-    background-image: linear-gradient(to bottom right, #007b9d, #1E90FF);
+    background: rgb(51, 50, 50);
     display: inline-block;
     cursor: pointer;
 }
@@ -125,20 +125,10 @@ nav li>a ,.dropbtn{
 .dropdown-content a:hover {background-color: #007b9d; color: #FFF;}
 nav ul li>a:hover{
     position: relative;
-    background: #234ae4;
+    color: #000;
+    background: #048eb4;
     animation-name: example;
     animation-duration: 0.5s;
-}
-@keyframes example {
-    from {border-top : 2px solid #FFCC00;}
-    to   {border-top: 5px solid #FFCC00;}
-}
-#toggle {
-    display: none;
-    color: #fff;
-    background: #234ae4;
-    padding: 1.5em 2em;
-    float: right;
 }
 /*thong ke*/
 .row {
@@ -298,14 +288,21 @@ iframe {
 /*Bluezone*/
 .row.app {
     background: #0166de;
+    flex-wrap: inherit;
     flex-direction: column;
 }
 .bluezone-content .logodown {
-    margin-left: 11em ;
     margin-bottom: 2em;
     height: 5em;
     width: 12em;
     float: left;
+}
+img.app-store-download.logodown {
+    margin-left: 10em;
+}
+img.gg-play-download.logodown {
+    float: right;
+    margin-right: 10em;
 }
 .bluezone .bluezone-content p {
     padding: 1.4em 3.5em;
@@ -395,7 +392,7 @@ footer li {
     color: #fff;
 }
 .contact {
-    width: calc(100% - 35% - 25% - 60px);
+    width: calc(35% - 60px);
     margin-right: 0 !important;
 }
 .contact .info {
@@ -466,6 +463,52 @@ footer li {
     font-size: 50px;
     float: right;
     position: fixed;
-    bottom: 60px;
+    bottom: 80px;
     right: 10px;
+}
+
+/*Responsive*/
+/*PC*/
+@media all and (max-width: 999px)
+{
+    div.thke { 
+        width: 100%;
+        padding-top: 1em;
+    }
+    div#slide.column {
+        width: 100%;
+        padding: 2em;
+    }
+    .new ul li {
+        max-width: 45%;
+        height: 23em;
+    }
+}
+
+
+/*tablet*/
+@media all and (max-width: 838px)
+{   
+    .new ul li {
+        max-width: 40%;
+        height: 20em;
+    }
+    .hiden {
+        display: none;
+    }
+    header {
+        height: auto;}
+    nav {
+        display: flex;
+    }
+
+    nav ul li {
+        float: right;
+        display: flex;
+        
+    }
+    nav li>a{
+    width: 220px;
+    text-align: center;
+
 }
