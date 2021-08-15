@@ -1,23 +1,36 @@
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
     box-sizing: border-box;
 }
-html {  background: #017d91; }
 body {
     font-family: Arial, Tahoma, Verdana,sans-serif;
     font-size: 16px;
     background: transparent;
     color: #000;
+    line-height: 1.6;
+    font-size: 100%;
 }
+div.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+div.wrap {background-image: linear-gradient(  #87CEFA, #0099FF);border-top: 5px groove;display: flex;}
 #header, main, #footer {
     width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 header {
+    width: 100%;
     height: 205px;
-    background-image: linear-gradient(#FFFFFF,  #00FFFF);
-    position: relative;		
+    background-image: linear-gradient(  #1E90FF, #FFFFFF 65%, #1E90FF);
+    position: relative;
+    display: flex;
 }
 main {
     background: #FFF;
@@ -26,13 +39,57 @@ main {
     width: 300px;
     margin: 15px 0 0 40px;
 }
-div#search {
+/*seach*/
+.search {
     float: right;
-    margin: 10px 16px 0 0;
+    padding: 20px 30px 0 0;
+    }
+.search > div {
+      display: inline-block;
+      position: relative;
+    }
+.search > div:after {
+    content: "";
+    background: white;
+    width: 5px;
+    height: 15px;
+    position: absolute;
+    top: 25px;
+    right: -1px;
+    transform: rotate(145deg);
+    }
+    
+.search > div > input {
+    color: #FFF;
+    font-size: 10px;
+    background: transparent;
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    border: solid 5px white;
+    outline: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    }
+    
+.search > div > input::placeholder {
+      color: #efefef;
+      opacity: 0;
+      transition: opacity 150ms ease-out;
 }
+    
+.search > div > input:focus::placeholder {
+      opacity: 1;
+    }
+    
+.search > div > input:focus,.search > div > input:not(:placeholder-shown) {
+      width: 150px;
+}
+/*Nav*/
 nav {
-	margin-right: 15px;
-    float: right;
+    margin-right: 15px;
+    display: flex;
+    justify-content: flex-end;
 }
 nav ul li {
     list-style: none;
@@ -41,10 +98,10 @@ nav ul li {
 }
 nav li>a ,.dropbtn{
     padding: 20px;
-	text-decoration: none;
+    text-decoration: none;
     color: #fff;
     font-weight: 550;
-    background-image: linear-gradient(to bottom right, #007b9d, #0099FF);
+    background-image: linear-gradient(to bottom right, #007b9d, #1E90FF);
     display: inline-block;
     cursor: pointer;
 }
@@ -60,6 +117,7 @@ nav li>a ,.dropbtn{
 }
 .dropdown-content a {
   color: #000;
+  font-weight: 600;
   padding: 12px 16px;
   background-color: #FFFFFF;
   text-decoration: none;
@@ -78,10 +136,11 @@ nav ul li>a:hover{
     from {border-top: 2px solid #FFCC00;}
     to   {border-top: 5px solid #FFCC00;}
 }
-/*Thống kê*/
+/*thong ke*/
 .row {
-    display: table;
-    content: " ";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 div.thke {
     width: 65%;
@@ -158,14 +217,12 @@ div#slide.column {
     width: 100%;
     border-radius: 10px;
 }
-/*Diễn biến*/
+/*Dien bien*/
 div.content {
     width: 65%;
-    height: 700px;
-    display: inline-block;
-}
-#sidebar{
-    vertical-align: top; ackground-color: palevioletred;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 .title{
     font-size: 22px;
@@ -178,55 +235,251 @@ div.content {
 #dienbien .thtin{
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 400px;
+    max-height: 600px;
     padding: 5px 0;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 15px 20px;
     line-height: 1.5;
     letter-spacing: 1px;
+    box-shadow: 3px 5px #777777;
+    border: 5px ridge
 }
 .thtin p{
     background-color: rgba(206, 206, 206, 0.356);
     padding: 20px;
 }
-/*Tin tức*/
-.new .tin {
-    height: 170px;
-    width: 170px;
-    margin: 20px 5px 10px 5px;
-    display: inline-block;
-    vertical-align: top;
+/*tin tức*/
+.new ul li {
+    max-width: 230px;
+    height: 270px;
+    list-style: none;
+    float: left;
+    margin: 10px 0px 10px 25px;
+    padding: 10px;
+    border: 1px solid #000;
+    box-shadow: 4px 6px #777777;
 }
 .new a img {
-    object-fit: cover;
-    height: 100%;
+    overflow: hidden;
+    height: 144px;
     width: 100%;
+    transform: all 1s ease-in-out;
 }
 .new a {
     text-decoration: none;
     color: #000;
     font-weight: 550;
 }
+.new ul li:hover img {
+    transform: scale(1.05);
+}
+
 /*Video*/
 div.sidebar { 
     width: 33%;
-    display: inline-block;
-    float: right; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
 }
-div#video {
-    margin: 10px 0 10px 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 700px;
+iframe {
+    width: 100%;
+    height: 200px;
+    padding: 5px;
 }
 .title-video {
     font-size: 20px;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-weight: 600;
+}
+/*Bluezone*/
+.row.app {
+    background-image: url(../images/banner.png);
+    background-size: 100%;
+    display: block;
+    height: 300px;
+}
+.bluezone-content .logodown {
+    margin-left: 70px ;
+    margin-top: 30px;
+    height: 70px;
+    width: 200px;
+    float: left;
+}
+.bluezone .bluezone-content p {
+    padding: 20px 70px;
+    line-height: 1.5em;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
 }
 /*footer*/
 footer {
-    height: 200px;
-    background: beige;
+    width: 100%;
+    height: auto;
+    background: #6B6B6B;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#footer {
+    position: relative;
+    padding: 50px 100px 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer #footer .sec {
+    margin-right: 30px;
+}
+footer #footer .sec.aboutus {
+    width: 35%;
+}
+footer #footer h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer #footer h2:before {
+    content: ' ';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: red;
+}
+footer #footer .sec.aboutus p {
+    color: #AAA;
+}
+.mxh {
+    margin-top: 20px;
+    display: flex;
+}
+footer li {
+    list-style: none;
+}
+.mxh li a {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 12.5px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    background: #999999;
+}
+.mxh li a:hover {
+    background:   #666666;
+}
+.mxh li a .fab {
+    color: #fff;
+    font-size: 20px;
+}
+.quick-link {
+    position: relative;
+    width: 25%;
+}
+.quick-link li a {
+    color: #AAA;
+    text-decoration: none;
+    margin-bottom: 25px;
+    display: inline-block;
+} 
+.hover ul li a:hover {
+    color: #fff;
+}
+.contact {
+    width: calc(32% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info {
+    position: relative;
+}
+.contact .info li {
+    display: flex;
+    margin-bottom: 8px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.contact .info li span {
+    color: #AAA;
+}
+.contact .info li a {
+    color: #AAA;
+    text-decoration: none;
+}
+.copyrighttext {
+    width: 100%;
+    background: #181818;
+    color: #999;
+    padding: 8px 0px;
+}
+/*Hotline*/
+#call{
+    position: fixed;
+    bottom: 40px;
+    left: 30px;
+}
+#call img {
+    background: #FFF;
+    border-radius: 10px;
+}
+#call a{
+    display: block;
+    width: 30px;
+}
+#call a:after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    width: 70px;
+    height: 35px;
+    margin-left: 0px;
+    transition: .25s;
+    z-index: -1;
+}
+#call a:hover:after{
+    content: " Hotline";
+    background: red;
+    width: 70px;
+    height: 35px;
+    margin-left: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0 ;
+    color: #fff;
+}
+/*top*/
+.back2top{
+    display: block;
+    color: #fff;
+    font-size: 50px;
+    float: right;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
 }
 
+/*Responsive*/
+/*PC*/
+@media (min-width: 1024px)
+{
 
+}
+/*tablet*/
+@media (min-width: 1024px)
+{
+    
+}
+/*mobile*/
+@media (min-width: 1024px)
+{
+    
+}

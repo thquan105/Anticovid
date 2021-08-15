@@ -3,27 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Bài Thi thiết kế web chủ đề dịch bệnh Covid">
+	<meta name="description" content="Bài Thi thiết kế web chủ đề dịch bệnh Covid">
 	<meta name="keywords" content="Covid-19; viruss; Corona; Dịch bệnh">
 	<link rel="shortcut icon" type="image/png" href="images/covid.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-        <link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/thquan105/Anticovid/ebf9103e5717d3c2e338e46762657487ea1ed943/public_html/CSS/style.css">
+	<link rel="stylesheet" href="CSS/style.css"><!--
+	<link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/thquan105/Anticovid/ebf9103e5717d3c2e338e46762657487ea1ed943/public_html/CSS/style.css">-->
 	<title>Anti COVID</title>
 </head>
 <body>
-	<!-- Header -->
+	<div class="container">
+		<!-- Header -->
 	<header>
 		<div id="header">
 		<div class="logo">
 			<a class="btn" href="#" title="Anti_covid"><img src="images/viruss.png" alt="Anti COVID"></a>
-			<div id="search">
-				<form>
-					<input type="text" name="search" placeholder="Nhập từ khoá...">
-					<button class="icon"><i class="fas fa-search"></i></button>
-				</form>
+			<div class="search">
+      	<div>
+       		<input type="text" placeholder="Search . . ." required>
+    		</div>
 			</div>
-		</div>
 		<nav>
 			<ul>
 				<li><a href="#" title="Trang chủ"><span><i class="fas fa-home"></i></span></a></li>
@@ -45,7 +44,8 @@
 		</nav>
 		</div>			
 	</header>
-	<!-- Main -->
+	<div class="wrap">
+		<!-- Main -->
 	<main>
 		<div class="row">
 			<div class="column thke">
@@ -140,54 +140,160 @@
 				<div class="row" id="tintuc">
       				<span class="title">TIN TỨC</span>
       				<div class="new">
-	      				<div class="tin new-1">
-	      					<a href="https://vnexpress.net/covid-19-hanoi-12-8-4339023.html">
-	      						<img src="images/new1.jpg" title="HN tăng 70 ca nghi. ">
-	      						<p class="justify">Hà Nội thêm 70 ca nghi Covid-19 trong 24 giờ.</p>
-	      					</a>
-	      				</div>
-	      				<div class="tin new-2">
-	      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6827">
-	      						<img src="images/new2.jpg" title="Thêm 9.667 ca nhiễm mới.">
-	      						<p class="justify">Bản tin COVID-19 tối 12/8: HN, TP HCM và 40 tỉnh thêm 9.667 ca nhiễm mới một ngày.</p>
-	      					</a>
-	      				</div>
-	      				<div class="tin new-3">
-	      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6824">
-	      						<img src="images/new3.jpg" title="Thay đổi lớn sau khi tiêm vắc_xin.">
-	      						<p class="justify">Thay đổi lớn trong nhóm người cần thận trọng khi tiêm vaccine COVID-19.</p>
-	      					</a>
-	      				</div>
-	      				<div class="tin new-4">
-	      					<a href="https://vnexpress.net/covid-24h-tp-hcm-dam-phan-mua-vaccine-moderna-hn-xet-nghiem-3-trieu-nguoi-4339262.html">
-	      						<img src="images/new4.jpg" title="Xét nghiệm 3 triệu người.">
-	      						<p class="justify">TP Hồ Chí Minh đàm phán mua vaccine Moderna, Hà Nội xét nghiệm 3 triệu người.</p>
-	      					</a>
-	      				</div>
+      					<ul>
+      						<li>
+			      				<div class="tin new-1">
+			      					<a href="https://vnexpress.net/covid-19-hanoi-12-8-4339023.html">
+			      						<img src="images/new1.jpg" title="HN tăng 70 ca nghi. ">
+			      					</a>
+			      					<a href="https://vnexpress.net/covid-19-hanoi-12-8-4339023.html">Hà Nội thêm 70 ca nghi Covid-19 trong 24 giờ.</a>
+			      				</div>
+			      			</li>
+      						<li>
+			      				<div class="tin new-2">
+			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6827">
+			      						<img src="images/new2.jpg" title="Thêm 9.667 ca nhiễm mới.">
+			      					</a>
+			      					<a  href="https://ncov.moh.gov.vn/web/guest/-/6847426-6827">Bản tin COVID-19 tối 12/8: HN, TP HCM và 40 tỉnh thêm 9.667 ca nhiễm mới một ngày.</a>
+			      				</div>
+			      			</li>
+      						<li>
+			      				<div class="tin new-3">
+			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6824">
+			      						<img src="images/new3.jpg" title="Thay đổi lớn sau khi tiêm vắc_xin.">
+			      					</a>
+			      					<a  href="https://ncov.moh.gov.vn/web/guest/-/6847426-6824">Thay đổi lớn trong nhóm người cần thận trọng khi tiêm vaccine COVID-19.</a>
+			      				</div>
+			      			</li>
+      						<li>
+			      				<div class="tin new-4">
+			      					<a href="https://vnexpress.net/covid-24h-tp-hcm-dam-phan-mua-vaccine-moderna-hn-xet-nghiem-3-trieu-nguoi-4339262.html">
+			      						<img src="images/new4.jpg" title="Xét nghiệm 3 triệu người.">
+			      					</a>
+			      					<a  href="https://vnexpress.net/covid-24h-tp-hcm-dam-phan-mua-vaccine-moderna-hn-xet-nghiem-3-trieu-nguoi-4339262.html">TP Hồ Chí Minh đàm phán mua vaccine Moderna, Hà Nội xét nghiệm 3 triệu người.</a>
+			      				</div>
+	      					</li>
+	      					<li>
+			      				<div class="tin new-5">
+			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6690">
+			      						<img src="images/new5.jpg" title="Hà Nội cái kết đắng ...">
+			      					</a>
+			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6690">Hà Nội: Cái kết đắng cho những thanh niên "thông chốt" bằng côn nhị khúc, xe phân khối lớn</a>
+			      				</div>
+			      			</li>
+			      			<li>
+			      				<div class="tin new-6">
+			      					<a href="https://ncov.moh.gov.vn/en/-/6847426-6744">
+			      						<img src="images/new6.jpg" title="Phạt 12,5 triệu vì khoe đi quanh HN nhờ thẻ đỏ">
+			      					</a>
+			      					<a href="https://ncov.moh.gov.vn/en/-/6847426-6744">Khoe đi vòng quanh Hà Nội nhờ "thẻ đỏ quyền lực từ ba", cô gái trẻ bị phạt 12,5 triệu đồng</a>
+			      				</div>
+			      			</li>
+	      				</ul>
       				</div>
 				</div>
 			</div>
 			<div class="column sidebar">
       			<span class="title">VIDEO</span>
       			<div id="video">
-      				<iframe width="100%" height="200px" src="https://www.youtube.com/embed/N__MIp5KA38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-      				<div class="title-video justify">5 ĐIỂM CẦN LÀM TỐT ĐỂ PHÒNG CHỐNG COVID-19</div>
-      				<iframe width="100%" height="200px" src="https://www.youtube.com/embed/cXwLwWoWXXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      				<div class="title-video justify">VỚI CHỦNG DELTA, CÁC TRIỆU CHỨNG THƯỜNG GẶP KHI NHIỄM COVID-19?</div>
-      				<iframe width="100%" height="200px" src="https://www.youtube.com/embed/A4eXn59IuQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      				<div class="title-video justify">HƯỚNG DẪN SỬ DỤNG KHẨU TRANG ĐÚNG ĐỂ PHÒNG CHỐNG DỊCH COVID-19</div>
-      				<iframe width="100%" height="200px" src="https://www.youtube.com/embed/WCNvWBN8dUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      				<div class="title-video" justify>NHỮNG LƯU Ý TRƯỚC VÀ SAU TIÊM VẮC-XIN COVID-19</div>
+      				<iframe src="https://www.youtube.com/embed/N__MIp5KA38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+      				<div class="title-video text-up">5 ĐIỂM CẦN LÀM TỐT ĐỂ PHÒNG CHỐNG COVID-19</div>
+      				<iframe src="https://www.youtube.com/embed/cXwLwWoWXXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<div class="title-video text-up">VỚI CHỦNG DELTA, CÁC TRIỆU CHỨNG THƯỜNG GẶP KHI NHIỄM COVID-19?</div>
+      				<iframe src="https://www.youtube.com/embed/A4eXn59IuQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<div class="title-video text-up">HƯỚNG DẪN SỬ DỤNG KHẨU TRANG ĐÚNG ĐỂ PHÒNG CHỐNG DỊCH COVID-19</div>
+      				<iframe src="https://www.youtube.com/embed/WCNvWBN8dUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<div class="title-video text-up" >NHỮNG LƯU Ý TRƯỚC VÀ SAU TIÊM VẮC-XIN COVID-19</div>
+      				<iframe src="https://www.youtube.com/embed/3K0bxYUeX_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<div class="title-video text-up" >Sở Y tế TP.HCM cập nhật hướng dẫn chăm sóc F0 Covid-19 cách ly tại nhà mới nhất</div>
     			</div>
 			</div>
 		</div>
-		<div class="row"></div>
+		<div class="row app">
+			<div class="bluezone">
+				<div class="bluezone-content">
+					<p>Bảo vệ mình <br>Bảo vệ cộng đồng <br>Hãy cài đặt ứng dụng Bluezone!</p>
+					<div>
+            <a href="https://apps.apple.com/vn/app/bluezone/id1508062685?ls=1" target="_blank"><img class="app-store-download logodown" src="images/app-store-logo.png" style="display: inline;"></a>
+          </div>
+          <div>
+            <a href="https://play.google.com/store/apps/details?id=com.mic.bluezone" target="_blank"><img class="gg-play-download logodown" src="images/Google_Play-Logo.png" style="display: inline;"></a>
+          </div>
+				</div>
+			</div>
+		</div>
 	</main>
-	<!-- Footer -->
+	</div>
+		<!-- Footer -->
 	<footer>
-		<div id="footer"></div>
+		<div id="footer">
+			<div class="sec aboutus">
+				<h2>VỀ CHÚNG TÔI</h2>
+				<p>ANTI COVID là kênh thông tin, tin tức - sự kiện, diễn biến về tình hình dịch bệnh Covid 19 mới nhất. Mọi thông tin được cập nhật liên tục, chính xác và đầy đủ nhất.</p>
+				<ul class="mxh">
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+				</ul>
+			</div>			
+			<div class="sec quick-link hover">
+				<h2>Quick Links</h2>
+				<ul>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">ADS</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms & Consitions</a></li>
+				</ul>
+			</div>
+			<div class="sec contact hover">
+				<h2>Author Info</h2>
+					<ul class="info">
+						<li>
+							<span>Họ và tên: Trần Hoàng Quân</span>
+						</li>
+						<li>
+							<span>MSV: 2050531200258</span>
+						</li>
+						<li>
+							<span><i class="fas fa-phone"></i></span>
+							<p><a href="tel:+84703917859"> (+84) 703917859</a></p>
+						</li>
+						<li>
+							<span><i class="far fa-envelope"></i></span>
+							<p><a href="mailto:Thquan2212@gmail.com"> Thquan2212@gmail.com</a></p>
+						</li>
+					</ul><br>
+					<ul class="info">
+						<li>
+							<span>Họ và tên: Phạm Khắc Tưởng</span>
+						</li>
+						<li>
+							<span>MSV: 2050531200328</span>
+						</li>
+						<li>
+							<span><i class="fas fa-phone"></i></span>
+							<p><a href="tel:+84962367144"> (+84) 962367144</a></p>
+						</li>
+						<li>
+							<span><i class="far fa-envelope"></i></span>
+							<p><a href="mailto:Tuongdang297@gmail.com"> Tuongdang297@gmail.com</a></p>
+						</li>
+					</ul>
+			</div>
+		</div>
+		<div class="copyrighttext center">
+			<p>Copyright © 2021</p>
+		</div>
+		<div id="call" >										
+    	<a href="tel:19009095"><img src="images/call.png"/></a>
+  	</div>
+  	<a href="#top" class="back2top" ><i class="fas fa-arrow-alt-circle-up"></i></a>
+
 	</footer>
-	
+
+	<!--  jQuery  -->
 	<script>
 		var index = 1;
 		changeslide = function() {
@@ -198,34 +304,35 @@
 				index = 0;
 			}
 		}
-		setInterval(changeslide, 1500);
-        </script>
-        <!-- Messenger Plugin chat Code -->
-        <div id="fb-root"></div>
+		setInterval(changeslide, 2000);
+	</script>
 
-        <!-- Your Plugin chat code -->
-        <div id="fb-customer-chat" class="fb-customerchat">
-        </div>
+<!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
 
-        <script>
-          var chatbox = document.getElementById('fb-customer-chat');
-          chatbox.setAttribute("page_id", "106467021741388");
-          chatbox.setAttribute("attribution", "biz_inbox");
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-          window.fbAsyncInit = function() {
-            FB.init({
-              xfbml            : true,
-              version          : 'v11.0'
-            });
-          };
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106467021741388");
+      chatbox.setAttribute("attribution", "biz_inbox");
 
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-        </script>
-</body>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </body>
 </html>
