@@ -8,8 +8,7 @@
 	<link rel="shortcut icon" type="image/png" href="images/covid.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="CSS/style.css">
-	<!-- Css raw online-->
-	<link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/thquan105/Anticovid/7b17f6144debc960ec96dde3fd0963f034d50727/public_html/CSS/style.css">-->
+	<link rel="stylesheet" href="CSS/responsive.css">
 	<title>Anti COVID</title>
 </head>
 <body>
@@ -17,14 +16,16 @@
 		<!-- Header -->
 	<header>
 		<div id="header">
-		<div class="logo">
-			<a class="btn" href="#" title="Anti_covid"><img src="images/viruss.png" alt="Anti COVID"></a>
-			<div class="search">
-      	<div>
-       		<input type="text" placeholder="Search . . ." required>
-    		</div>
+			<div class="logo">
+				<a class="btn" href="#" title="Anti_covid"><img src="images/viruss.png" alt="Anti COVID"></a>		
+				<div class="search">
+      			<div>
+       				<input type="text" placeholder="Search . . ." required>
+    			</div>
+				</div>
 			</div>
-		<nav>
+			<div id="toggle"><i class="fas fa-bars"></i></div>
+			<nav>
 			<ul>
 				<li><a href="#" title="Trang chủ"><span><i class="fas fa-home"></i></span></a></li>
 				<li><a href="#" title="Tin tức">TIN TỨC</a></li>
@@ -42,7 +43,7 @@
 					</div>
 				</li>
 			</ul>
-		</nav>
+			</nav>
 		</div>			
 	</header>
 	<div class="wrap">
@@ -174,7 +175,7 @@
 			      					<a  href="https://vnexpress.net/covid-24h-tp-hcm-dam-phan-mua-vaccine-moderna-hn-xet-nghiem-3-trieu-nguoi-4339262.html">TP Hồ Chí Minh đàm phán mua vaccine Moderna, Hà Nội xét nghiệm 3 triệu người.</a>
 			      				</div>
 	      					</li>
-	      					<li>
+	      					<li class="hiden">
 			      				<div class="tin new-5">
 			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6690">
 			      						<img src="images/new5.jpg" title="Hà Nội cái kết đắng ...">
@@ -182,7 +183,7 @@
 			      					<a href="https://ncov.moh.gov.vn/web/guest/-/6847426-6690">Hà Nội: Cái kết đắng cho những thanh niên "thông chốt" bằng côn nhị khúc, xe phân khối lớn</a>
 			      				</div>
 			      			</li>
-			      			<li>
+			      			<li class="hiden">
 			      				<div class="tin new-6">
 			      					<a href="https://ncov.moh.gov.vn/en/-/6847426-6744">
 			      						<img src="images/new6.jpg" title="Phạt 12,5 triệu vì khoe đi quanh HN nhờ thẻ đỏ">
@@ -205,8 +206,8 @@
       				<div class="title-video text-up">HƯỚNG DẪN SỬ DỤNG KHẨU TRANG ĐÚNG ĐỂ PHÒNG CHỐNG DỊCH COVID-19</div>
       				<iframe src="https://www.youtube.com/embed/WCNvWBN8dUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       				<div class="title-video text-up" >NHỮNG LƯU Ý TRƯỚC VÀ SAU TIÊM VẮC-XIN COVID-19</div>
-      				<iframe src="https://www.youtube.com/embed/3K0bxYUeX_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      				<div class="title-video text-up" >Sở Y tế TP.HCM cập nhật hướng dẫn chăm sóc F0 Covid-19 cách ly tại nhà mới nhất</div>
+      				<iframe class="hiden" src="https://www.youtube.com/embed/3K0bxYUeX_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<div class="title-video text-up hiden" >Sở Y tế TP.HCM cập nhật hướng dẫn chăm sóc F0 Covid-19 cách ly tại nhà mới nhất</div>
     			</div>
 			</div>
 		</div>
@@ -215,11 +216,11 @@
 				<div class="bluezone-content">
 					<p>Bảo vệ mình <br>Bảo vệ cộng đồng <br>Hãy cài đặt ứng dụng Bluezone!</p>
 					<div>
-            <a href="https://apps.apple.com/vn/app/bluezone/id1508062685?ls=1" target="_blank"><img class="app-store-download logodown" src="images/app-store-logo.png" style="display: inline;"></a>
-          </div>
-          <div>
-            <a href="https://play.google.com/store/apps/details?id=com.mic.bluezone" target="_blank"><img class="gg-play-download logodown" src="images/Google_Play-Logo.png" style="display: inline;"></a>
-          </div>
+            			<a href="https://apps.apple.com/vn/app/bluezone/id1508062685?ls=1" target="_blank"><img class="app-store-download logodown" src="images/app-store-logo.png" style="display: inline;"></a>
+          			</div>
+          			<div>
+           				<a href="https://play.google.com/store/apps/details?id=com.mic.bluezone" target="_blank"><img class="gg-play-download logodown" src="images/Google_Play-Logo.png" style="display: inline;"></a>
+          			</div>
 				</div>
 			</div>
 		</div>

@@ -19,34 +19,29 @@ div.container {
     flex-direction: column;
 }
 div.wrap {background-image: linear-gradient(  #87CEFA, #0099FF);border-top: 5px groove;display: flex;}
-#header, main, #footer {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
 header {
-    width: 100%;
-    height: 205px;
+    height: 100%;
     background-image: linear-gradient(  #1E90FF, #FFFFFF 65%, #1E90FF);
-    position: relative;
-    display: flex;
+}
+#header, main, #footer {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 main {
     background: #FFF;
 }
 .logo a img {
-    width: 300px;
-    margin: 15px 0 0 40px;
+    margin: 1em 0 0 2em;
 }
 /*seach*/
 .search {
     float: right;
-    padding: 20px 30px 0 0;
+    margin: 2em 2em 0 0;
+    top: 0;
     }
 .search > div {
-      display: inline-block;
-      position: relative;
+    display: inline-block;
+    position: relative;
     }
 .search > div:after {
     content: "";
@@ -83,12 +78,12 @@ main {
     }
     
 .search > div > input:focus,.search > div > input:not(:placeholder-shown) {
-      width: 150px;
+      width: 15em;
 }
 /*Nav*/
 nav {
-    margin-right: 15px;
-    display: flex;
+    float: right;
+    margin-right: 1.2em;
     justify-content: flex-end;
 }
 nav ul li {
@@ -107,6 +102,7 @@ nav li>a ,.dropbtn{
 }
 .dropbtn {
     border: 1px solid transparent;
+    height: 66px;
 }
 .dropdown-content {
   display: none;
@@ -129,12 +125,20 @@ nav li>a ,.dropbtn{
 .dropdown-content a:hover {background-color: #007b9d; color: #FFF;}
 nav ul li>a:hover{
     position: relative;
+    background: #234ae4;
     animation-name: example;
     animation-duration: 0.5s;
 }
 @keyframes example {
-    from {border-top: 2px solid #FFCC00;}
+    from {border-top : 2px solid #FFCC00;}
     to   {border-top: 5px solid #FFCC00;}
+}
+#toggle {
+    display: none;
+    color: #fff;
+    background: #234ae4;
+    padding: 1.5em 2em;
+    float: right;
 }
 /*thong ke*/
 .row {
@@ -143,9 +147,10 @@ nav ul li>a:hover{
     justify-content: space-between;
 }
 div.thke {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 65%;
-    height: 222px;
-    display: inline-block;
     background: beige;
     margin: 10px 0 0 10px;
     border-radius: 10px;
@@ -206,8 +211,7 @@ marquee{
 }
 /*SLIDE*/
 div#slide.column {
-    display: inline-block;
-    float: right;
+    display: flex;
     width: 33%;
     margin: 10px 10px 0 0;
 }
@@ -249,12 +253,12 @@ div.content {
 }
 /*tin tức*/
 .new ul li {
-    max-width: 230px;
-    height: 270px;
+    max-width: 29%;
+    height: 25em;
     list-style: none;
     float: left;
-    margin: 10px 0px 10px 25px;
-    padding: 10px;
+    margin: 2em 0 0.5em 1.7em;
+    padding: 0.5em;
     border: 1px solid #000;
     box-shadow: 4px 6px #777777;
 }
@@ -279,38 +283,37 @@ div.sidebar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 10px;
+    margin-right: 0.6em;
 }
 iframe {
     width: 100%;
-    height: 200px;
-    padding: 5px;
+    height: 17em;
+    padding: 0.3em;
 }
 .title-video {
     font-size: 20px;
-    padding: 10px 10px;
+    padding: 0.5em;
     font-weight: 600;
 }
 /*Bluezone*/
 .row.app {
-    background-image: url(../images/banner.png);
-    background-size: 100%;
-    display: block;
-    height: 300px;
+    background: #0166de;
+    flex-direction: column;
 }
 .bluezone-content .logodown {
-    margin-left: 70px ;
-    margin-top: 30px;
-    height: 70px;
-    width: 200px;
+    margin-left: 11em ;
+    margin-bottom: 2em;
+    height: 5em;
+    width: 12em;
     float: left;
 }
 .bluezone .bluezone-content p {
-    padding: 20px 70px;
+    padding: 1.4em 3.5em;
     line-height: 1.5em;
-    font-size: 24px;
+    font-size: 28px;
     color: #fff;
     font-weight: 500;
+    text-align: center;
 }
 /*footer*/
 footer {
@@ -333,7 +336,7 @@ footer #footer .sec {
     margin-right: 30px;
 }
 footer #footer .sec.aboutus {
-    width: 35%;
+    width: 30%;
 }
 footer #footer h2 {
     position: relative;
@@ -392,7 +395,7 @@ footer li {
     color: #fff;
 }
 .contact {
-    width: calc(32% - 60px);
+    width: calc(100% - 35% - 25% - 60px);
     margin-right: 0 !important;
 }
 .contact .info {
@@ -465,21 +468,4 @@ footer li {
     position: fixed;
     bottom: 60px;
     right: 10px;
-}
-
-/*Responsive*/
-/*PC*/
-@media (min-width: 1024px)
-{
-
-}
-/*tablet*/
-@media (min-width: 1024px)
-{
-    
-}
-/*mobile*/
-@media (min-width: 1024px)
-{
-    
 }

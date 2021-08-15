@@ -1,0 +1,49 @@
+
+/*Responsive*/
+/*PC*/
+@media all and (max-width: 999px)
+{
+    div.thke { 
+        width: 100%;
+        padding-top: 1em;
+    }
+    div#slide.column {
+        width: 100%;
+        padding: 2em;
+    }
+    .new ul li {
+        max-width: 45%;
+        height: 23em;
+    }
+}
+
+
+/*tablet*/
+@media all and (max-width: 838px)
+{   
+    .new ul li {
+        max-width: 40%;
+        height: 20em;
+    }
+    .hiden {
+        display: none;
+    }
+    header {
+        height: auto;}
+    nav {
+        display: flex;
+    }
+
+    nav ul li {
+        float: right;
+        display: flex;
+        
+    }
+    nav li>a{
+    width: 220px;
+    text-align: center;
+
+    }
+        .dropdown { display: none;}
+
+}
